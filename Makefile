@@ -14,8 +14,8 @@ all: modules
 modules:
 	export ARCH=$(ARCH)
 	export CROSS_COMPILE=$(CROSS_COMPILE)
-	${MAKE}  -C ${KERNELDIR} SUBDIRS=${MODULE_DIR}  modules
-
+	${MAKE} −C /lib/modules/$(shell uname −r)/build M=$(PWD) modules
+	
 modules_install:
 	export ARCH=$(ARCH)
 	export CROSS_COMPILE=$(CROSS_COMPILE)
