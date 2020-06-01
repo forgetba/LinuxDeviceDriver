@@ -1,6 +1,6 @@
 ifneq (${KERNELRELEASE},)
 
-	obj-m  = rotation-sensor.o
+	obj-m  = mon_premier_driver.o
 else
 
 	KERNELDIR        ?= /lib/modules/$(shell uname -r)/build
