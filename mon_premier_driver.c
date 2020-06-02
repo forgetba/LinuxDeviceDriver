@@ -12,5 +12,8 @@ static void __exit mon_premier_driver_cleanup(void)
     printk(KERN_DEBUG "|| MON PREMIER DRIVER || Goodbye World!\n");
 }
 
+// Enlève le warning "no module_license()"
+MODULE_LICENSE("GPL");
+
 module_init(mon_premier_driver_init);
 module_exit(mon_premier_driver_cleanup);
